@@ -2,19 +2,16 @@ class Solution {
     public boolean solution(int x) {
         boolean answer = false;
         
-        String s = Integer.toString(x);
-        String[] arr = s.split("");
+        String str = Integer.toString(x);
+        String[] arr = str.split(""); 
         
-       // arr의 배열수를 각 더한 값이 a > (s%a == 0)? true : flase 
-        int total = 0;
+        int sum = 0;
         
-        for (int i=0; i<arr.length; i++){
-            total += Integer.parseInt(arr[i]);
+        for(int i = 0; i<arr.length; i++){
+            sum += Integer.parseInt(arr[i]);
         }
         
-        answer = (x%total == 0)? true : false;
-        
-        
+        answer = (x % sum ==0)? true : false;
         
         return answer;
     }
