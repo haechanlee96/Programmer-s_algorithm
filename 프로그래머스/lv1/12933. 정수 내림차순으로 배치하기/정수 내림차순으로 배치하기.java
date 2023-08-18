@@ -4,20 +4,13 @@ class Solution {
     public long solution(long n) {
         long answer = 0;
         
-        String s = String.valueOf(n);
-        String[] arr = s.split("");
+        String str = Long.toString(n);
+        String[] arr = str.split("");
         
-        Arrays.sort(arr, Collections.reverseOrder());
-        String s1 = String.join("", arr);
+        Arrays.sort(arr,Collections.reverseOrder());
+        String str1 = String.join("",arr);
         
-        // Arrays.sort(arr, Collections.reverseOrder());
-        // String s1 = "";
-        // for(int i=0; i<arr.length; i++){
-        //     s1 += arr[i];
-        // }
-        
-        answer = Long.parseLong(s1);
-        
+        answer = Long.parseLong(str1);
         return answer;
     }
 }
